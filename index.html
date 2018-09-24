@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+<title>Persona</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="html/CSS/Central.css" rel="stylesheet" type="text/css"/>
+<style>	
+	
+
+	
+</style>
+</head>
+<body>
+
+<div class="bg">
+
+	<img onclick= "openNavi()" id = "dd_img" src="html/Content/DD_smol.png" alt="DD Image" title="Click for Main Menu"/>
+
+	<p id="motto" onclick="openSearch()"> E X E G I   ・   M O N U M E N T U M   ・   A E R E   ・   P E R E N N I U S</p>
+</div>
+
+<script src="html/Script/Central.js"></script>
+
+<!-- ____________________________________________________________________________-->
+
+
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Main Menu">×</span>
+    <form method="get" action = "http://www.google.com/search" target="_blank">
+      <input type="search" placeholder="type to search" name="q">
+    </form>
+
+</div>
+<!-- ____________________________________________________________________________-->
+
+<div id="div_navi">
+	<span class="closebtn" onclick="closeNavi()" title="Close Overlay">×</span>
+	<ul class = "list_navi">
+		<li><a id="langLink" target="_blank" href = "">Language</a></li>
+		<li><a target="_blank" href = "https://www.bbc.co.uk/news">News</a></li>
+		<li><a target="_blank" href = "https://learning.qol.qub.ac.uk/default.aspx">QOL</a></li>
+		<li><a target="_blank" href = "https://mail.google.com/mail/u/0/#inbox">Gmail</a></li>
+		<li><a target="_blank" href = "https://outlook.office365.com/owa/?realm=qub.ac.uk">Qmail</a></li>
+		<li><a target="_blank" href = "https://web.whatsapp.com/">WhatsApp</a></li>
+		<li><a target="_blank" href = "https://linkedin.com/in/danohawkins">Persona</a></li>
+		
+	</ul>
+	
+
+	</div>
+
+<div id="naviOverlay"><p onclick="displayLang()" id="timeAptitude"> Good Afternoon, Dano</p>
+
+  <div class="langDisplay" id="langDisp">
+  <div class="close" onclick="closeLang()" title="Close Language Board">×</div>
+  <div class="cycle" onclick="langBoardGen()" title="Cycle Language">o</div>  
+    <h2 onclick="displayInfoLang()" id = "langTitle">Phrases en Français (French)</h2>
+	<ul class="lang" id="langList">
+		<li><b id="hello"> Bonjour</b> (Hello)</li>
+		<li><b id="hru"> Comment ça va?</b>   (How are you?)</li>
+		<li><b id="resp"> Ça va bien</b> (I am good)</li>
+		<li><b id="ntmy"> Enchanté(e)</b> (Pleased to meet you (f))</li>
+		<li><b id="yes"> Oui</b> (Yes)</li>
+		<li><b id="no"> Non</b> (No)</li>
+		<li><b id="pls"> S’il vous plaît</b> (Please)</li>
+		<li><b id="thank"> Merci</b> (Thank you)</li>
+		<li><b id="toilet"> Où sont les toilettes?</b> (Where are the toilets?)</li>
+				
+  </div>
+  
+    <div class="langInfoDisplay" id="langInfoDisp">
+  <div class="close" onclick="closeLang()" title="Close Language Board">×</div>
+  <div class="cycle" onclick="langBoardGen()" title="Cycle Language">o</div>  
+    <h2 onclick="switchLang()" id = "sum">Phrases en Français (French)</h2>
+	<ul class="lang" id="langList">
+		<li><b> Linguistic Family:</b><p style="display:inline" id = "fam"> Indo-European (Western) Gallo-Romance Language</p></li>
+		<li><b> Number of speakers:</b><p style="display:inline" id = "num" >    c. 354 million</p></li>
+		<li><b> Spoken in:</b><p style="display:inline" id = "cntry">  France, Belgium, Switzerland, Cananda...etc</p></li>
+		<li><b> First written:</b><p style="display:inline" id = "date">  842 AD</p></li>
+		<li><b> Writing System:</b><p style="display:inline" id = "alpha">  Latin Script</p></li>
+		<li><b> Status:</b><p style="display:inline" id = "stat">  Official language in France, and also in Belgium, Benin, Burkina Faso, Burundi, Cameroon, Canada, Central African Republic, Chad, Comoros, Côte d'Ivoire, Democratic Republic of the Congo, Djibouti, Equatorial Guinea, Gabon, Guinea, Haiti, Luxembourg, Madagascar, Mali, Monaco, Niger, Republic of the Congo, Rwanda, Senegal, Seychelles, Switzerland, Togo, and Vanuatu.</p></li>
+						
+  </div>
+
+</div>
+<div></div>
+
+<!-- ____________________________________________________________________________-->
+
+
+
+
+<!-- ____________________________________________________________________________-->
+
+<script src="html/Script/Central.js"></script>
+<script src="html/Script/langDisplay.js"></script>
+<script>
+
+</script>
+</body>
+</html>
