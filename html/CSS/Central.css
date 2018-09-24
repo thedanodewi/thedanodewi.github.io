@@ -17,9 +17,9 @@
 
 #myOverlay .closebtn {
     position: fixed;
-    top: 20px;
-    right: 45px;
-    font-size: 120px;
+    top: 2%;
+    right: 2%;
+    font-size: 640%;
     cursor: pointer;
     color: white;
 	opacity: 1;
@@ -34,11 +34,11 @@
 	position: absolute;
 	top: 50%;
 	left: 0;
-	margin-top: -101px;
+	margin-top: -4.0%;
 	width: 60%;
 	margin-left: 20%;
-    padding: 40px;
-    font-size: 40px;
+    padding: 2%;
+    font-size: 320%;
 	font-weight: 300;
 	text-align: center;
 	outline:none;
@@ -55,9 +55,9 @@
 .overlay button {
     float: left;
     width: 20%;
-    padding: 15px;
+    padding: 2%px;
     background: #ddd;
-    font-size: 17px;
+    font-size: 120%;
     border: none;
     cursor: pointer;
 }
@@ -87,23 +87,23 @@ body, html {
 .im_center {
 	
 	display: block;
-	height: 900px;
+	height: 56%;
 	text-align:center;
-	max-width: 2160px;
+	max-width: 100%;
 	vertical-align: middle;
 	position: fixed;
-	margin-top: 248px;
-	margin-left:152px;
+	margin-top: 10%;
+	margin-left: 8%;
 
 }
 
 #dd_img {
-	max-width: 24%;
+	max-width: 20%;
 	max-height: auto;
 	border-radius: 50%;
 	top: 0;
 	left:0;
-	margin-left: 38%;
+	margin-left: 40%;
 	margin-top: 12%;
 	text-align: center;
 	cursor: pointer;
@@ -138,13 +138,6 @@ body, html {
 	
 }
 
-.navigation input[type=text] {
-  float: center;
-  padding: 6px;
-  margin-top: 90%px;
-  border: none;
-  font-size: 17px;
-}
 
 ::placeholder {
     color: rgb(250,250,240);
@@ -162,11 +155,10 @@ body, html {
 
 #div_navi{
 	position: fixed;
-	top:40px;
-	left:40px;
+	top: 2%;
+	left: 4%;
 	z-index: 10;
 	float: left;
-	padding: 0px;
 	text-decoration: none;
 	width: 24%;
 	height:100%;
@@ -184,8 +176,8 @@ ul.list_navi{
     width: 50%;
 	height: 100%;
     background-color: transparent;
-	padding: 4% 0px;
-	font-size: 32px;
+	padding: 4% 0%;
+	font-size: 200%;
 
 
 }
@@ -194,7 +186,7 @@ li a{
 	
     display: block;
     color: white;
-    padding: 32px 80px;
+    padding: 12% 16%;
     text-decoration: none;
 	text-align: center;	
 	border: 2px solid rgba(255,255,255,0);
@@ -222,9 +214,9 @@ li a:hover {
 
 #div_navi .closebtn {
     position: fixed;
-    top: 20px;
-    right: 45px;
-    font-size: 80px;
+    top: 2%;
+    right: 2%;
+    font-size: 640%;
     cursor: pointer;
     color: white;
 	opacity: 1;
@@ -257,13 +249,13 @@ li a:hover {
 
 	text-align: center;
 	position: fixed;
-	padding: 8%px 0px;
-	top:40.8%;
+	padding: 0% 0;
+	top:38%;
 	width: 60%;
 	left:20%;
 	color: 	rgba(255,255,255,0.7);
 	font-family: Courier New;
-	font-size: 48px;
+	font-size: 320%;
 	cursor: pointer;
 	z-index: 20;
 	background: transparent;
@@ -306,25 +298,25 @@ li a:hover {
     transition: all 1.2s;
 }
 
-ul.lang{ font-size: 24px;
+ul.lang{ 
 		list-style-type: none;
 		}
 li.lang{
 list-style-type: none; }
 
-ul.lang_smol{ font-size: 20px;
+ul.lang_smol{ 
 		list-style-type: none;
 		}
 
-#langTitle{ font-size: 36px;
+#langTitle{ font-size: 200%;
 			cursor: pointer}
 
 #langDisp .close {
 	background-color: rgb(0,0,0,0);
     float: right;
-	margin-right: -20px;
-	margin-top: 10px;
-    font-size: 24px;
+	margin-right: -3.2%;
+	margin-top: 1.2%;
+    font-size: 200%;
     cursor: pointer;
     color: rgba(255,255,255,0.72);
 	opacity: 1;
@@ -342,9 +334,9 @@ ul.lang_smol{ font-size: 20px;
 #langDisp .cycle {
 	background-color: rgb(0,0,0,0);
     float: left;
-	margin-left: -20px;
-	margin-top: 10px;
-    font-size: 24px;
+	margin-left: -3.2%;
+	margin-top: 1.2%;
+    font-size: 160%;
     cursor: pointer;
     color: rgba(255,255,255,0.72);
 	opacity: 1;
@@ -392,26 +384,26 @@ ul.lang_smol{ font-size: 20px;
     transition: all 1.2s;
 }
 
-ul.lang{ font-size: 24px;
+ul.lang{ font-size: 144%;
 		list-style-type: none;
 		}
 li.lang{
 list-style-type: none; }
 
-ul.lang_smol{ font-size: 20px;
+ul.lang_smol{ font-size: 120%;
 		list-style-type: none;
 		}
 
-#sum{ font-size: 36px;
+#sum{ font-size: 160%;
 	cursor: pointer}
 	
 
 #langInfoDisp .close {
 	background-color: rgb(0,0,0,0);
     float: right;
-	margin-right: -20px;
-	margin-top: 10px;
-    font-size: 24px;
+	margin-right: -3.2%;
+	margin-top: 1.2%;
+    font-size: 200%;
     cursor: pointer;
     color: rgba(255,255,255,0.72);
 	opacity: 1;
@@ -429,9 +421,9 @@ ul.lang_smol{ font-size: 20px;
 #langInfoDisp .cycle {
 	background-color: rgb(0,0,0,0);
     float: left;
-	margin-left: -20px;
-	margin-top: 10px;
-    font-size: 24px;
+	margin-left: -3.2%;
+	margin-top: 1.2%;
+    font-size: 200%;
     cursor: pointer;
     color: rgba(255,255,255,0.72);
 	opacity: 1;
