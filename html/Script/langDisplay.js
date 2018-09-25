@@ -19,7 +19,7 @@ function langBoardGen(){
 //**************************************************************
 // 				Chooses the language
 
-var langChoice = getRndInteger(1,9);
+var langChoice = getRndInteger(1,10);
 
 var greeting;
 var lang;
