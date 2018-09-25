@@ -33,12 +33,11 @@
 #myOverlay input[type=search] {
 	position: absolute;
 	top: 50%;
-	left: 0;
-	margin-top: -4.0%;
+	left: 50%;
 	width: 60%;
-	margin-left: 20%;
+	transform: translate(-50%, -80%);
     padding: 2%;
-    font-size: 320%;
+    font-size: 3.2vw;
 	font-weight: 300;
 	text-align: center;
 	outline:none;
@@ -98,13 +97,13 @@ body, html {
 }
 
 #dd_img {
-	max-width: 20%;
+	height: 40%;
+	position: fixed;
 	max-height: auto;
 	border-radius: 50%;
-	top: 0;
-	left:0;
-	margin-left: 40%;
-	margin-top: 12%;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -60%);
 	text-align: center;
 	cursor: pointer;
 	
@@ -123,8 +122,10 @@ body, html {
 
 	text-align: center;
 	position: fixed;
-	bottom: 8%;
-	width: 100%;
+	top: 80%;
+	left: 50%;
+	width: 80%;
+	transform: translate(-50%, -50%);
 	color: 	rgb(200,144,16);
 	font-size: 120%;
 	font-family: Courier New;
@@ -164,9 +165,9 @@ body, html {
 	height:100%;
 	display: none;
 	opacity: 0;
-	-webkit-transition: all .8s ease-in-out;
-    -moz-transition: all .8s ease-in-out;
-    transition: all .8s;
+	-webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s;
 
 }
 
@@ -177,7 +178,7 @@ ul.list_navi{
 	height: 100%;
     background-color: transparent;
 	padding: 4% 0%;
-	font-size: 200%;
+	font-size: 2vw;
 
 
 }
@@ -216,7 +217,7 @@ li a:hover {
     position: fixed;
     top: 2%;
     right: 2%;
-    font-size: 640%;
+    font-size: 4vw;
     cursor: pointer;
     color: white;
 	opacity: 1;
@@ -249,13 +250,14 @@ li a:hover {
 
 	text-align: center;
 	position: fixed;
-	padding: 0% 0;
-	top:38%;
-	width: 60%;
-	left:20%;
+	padding: 0;
+	top: 40%;
+	width: 40%;
+	left: 50%;
+	transform: translate(-50%,0);
 	color: 	rgba(255,255,255,0.7);
 	font-family: Courier New;
-	font-size: 320%;
+	font-size: 2.8vw;
 	cursor: pointer;
 	z-index: 20;
 	background: transparent;
@@ -302,13 +304,13 @@ ul.lang{
 		list-style-type: none;
 		}
 li.lang{
-list-style-type: none; }
+		}
 
 ul.lang_smol{ 
 		list-style-type: none;
 		}
 
-#langTitle{ font-size: 200%;
+#langTitle{ font-size: 2vw;
 			cursor: pointer}
 
 #langDisp .close {
@@ -316,7 +318,7 @@ ul.lang_smol{
     float: right;
 	margin-right: -3.2%;
 	margin-top: 1.2%;
-    font-size: 200%;
+    font-size: 2.4vw;
     cursor: pointer;
     color: rgba(255,255,255,0.72);
 	opacity: 1;
@@ -336,7 +338,7 @@ ul.lang_smol{
     float: left;
 	margin-left: -3.2%;
 	margin-top: 1.2%;
-    font-size: 160%;
+    font-size: 2.4vw;
     cursor: pointer;
     color: rgba(255,255,255,0.72);
 	opacity: 1;
@@ -384,17 +386,17 @@ ul.lang_smol{
     transition: all 1.2s;
 }
 
-ul.lang{ font-size: 144%;
+ul.lang{ font-size: 1vw;
 		list-style-type: none;
 		}
 li.lang{
-list-style-type: none; }
+ }
 
-ul.lang_smol{ font-size: 120%;
+ul.lang_smol{ font-size: 1vw;
 		list-style-type: none;
 		}
 
-#sum{ font-size: 160%;
+#sum{ font-size: 2vw;
 	cursor: pointer}
 	
 
@@ -403,7 +405,7 @@ ul.lang_smol{ font-size: 120%;
     float: right;
 	margin-right: -3.2%;
 	margin-top: 1.2%;
-    font-size: 200%;
+    font-size: 2.4vw;
     cursor: pointer;
     color: rgba(255,255,255,0.72);
 	opacity: 1;
@@ -423,7 +425,7 @@ ul.lang_smol{ font-size: 120%;
     float: left;
 	margin-left: -3.2%;
 	margin-top: 1.2%;
-    font-size: 200%;
+    font-size: 2.4vw;
     cursor: pointer;
     color: rgba(255,255,255,0.72);
 	opacity: 1;
