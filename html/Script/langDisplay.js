@@ -245,6 +245,33 @@ switch (langChoice) {
 		var vstat = "Official language in Romania, Moldova, Vojvodina in Serbia, Mount Athos in Greece. Recognised minority language in Hungary and Serbia";
 				
         break;	
+		
+			case 10:
+        lang = "hungarian";
+		if (timeApt == 1)		{greeting = "Jó reggelt" }
+		else if (timeApt == 2)	{greeting = "Jó napot" }
+		else 					{greeting = "Jó estét"}
+		
+		var langTit = "Magyar Kifejezések (Hungarian)";
+		var vhello = "Jó napot";
+		var vhru = "Hogy van?";
+		var vresp = "Jól. És Ön?";
+		var vntmy = "Örvendek";
+		var vyes = "Igen";
+		var vno = "Nem";
+		var vplease = "Kérem";
+		var vthank = "Köszönöm";
+		var vtoilet = "Hol van a mosdó?";
+		
+		var vsum = "Összefoglaló";
+		var vnum = "c. 13 million";
+		var vfam = "Uralic / Finno-Ugric";
+		var vcntry = "Hungary, Austria, Croatia, Poland, Romania, Serbia, Slovakia, Slovenia, and Ukraine.";
+		var vdate = "AD 1196";
+		var valpha = "Latin Script";
+		var vstat = "Official language in Hungary and the European Union. Recognised minority language in Romania, Croatia, Slovakia, and in parts of Slovenia, Austria, and Ukraine.";
+				
+        break;	
 // REMEMBER TO ALTER THE RANDOMISER WHEN ADDING LANGUAGES SO THAT IT CAN SELECT THE NEW LANGUAGE
 }
 
