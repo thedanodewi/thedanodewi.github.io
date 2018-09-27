@@ -68,7 +68,7 @@ switch (langChoice) {
 		var vhello = "Приве́т! (Privet!)";
 		var vhru = "Как дела? (Kak dela?)";
 		var vresp = "Xорошо. А у вас? (Xorošo. A u vas?)";
-		var vntmy = "Очень приятно (Očen' prijatno)";
+		var vntmy = "Приятно познакомиться (Priyatno poznakomit'sya)";
 		var vyes = "Да";
 		var vno = "Нет";
 		var vplease = "Пожалуйста (Požalujsta)";
