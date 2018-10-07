@@ -19,7 +19,7 @@ function langBoardGen(){
 //**************************************************************
 // 				Chooses the language
 
-var langChoice = getRndInteger(1,10);
+var langChoice = getRndInteger(1,11);
 
 var greeting;
 var lang;
@@ -270,6 +270,32 @@ switch (langChoice) {
 		var vdate = "AD 1196";
 		var valpha = "Latin Script";
 		var vstat = "Official language in Hungary and the European Union. Recognised minority language in Romania, Croatia, Slovakia, and in parts of Slovenia, Austria, and Ukraine.";
+				
+        break;	
+					case 11:
+        lang = "polish";
+		if (timeApt == 1)		{greeting = "Dzień dobry" }
+		else if (timeApt == 2)	{greeting = "Dzień dobry" }
+		else 					{greeting = "Dobry wieczór"}
+		
+		var langTit = "Polskie Zwroty (Polish)";
+		var vhello = "Cześć";
+		var vhru = "Jak się masz?";
+		var vresp = "Bardzo dobrze";
+		var vntmy = "Miło mi Pana poznać (Miwo mi panah poznach)";
+		var vyes = "Tak";
+		var vno = "Nie";
+		var vplease = "Proszę";
+		var vthank = "Dzięki";
+		var vtoilet = "Gdzie jest toaleta?";
+		
+		var vsum = "Podsumowanie";
+		var vnum = "c. 40 million";
+		var vfam = "Indo-European (Western) Slavic";
+		var vcntry = " Poland, Lithuania, Belarus, Czech Republic, Slovakia, Romania, and Ukraine.";
+		var vdate = "AD 1136";
+		var valpha = "Latin Script";
+		var vstat = "Official language in Poland, recognized minority language in Czech Republic, Slovakia, Romania and Ukraine.";
 				
         break;	
 // REMEMBER TO ALTER THE RANDOMISER WHEN ADDING LANGUAGES SO THAT IT CAN SELECT THE NEW LANGUAGE
