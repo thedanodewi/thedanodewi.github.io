@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<style>
+
+html, body {
+	overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+	background-color: #262D3B;
+}
+
+.half_width{
+  display: inline-block;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  background-color: #262D3B;
+  padding: 0px;
+  margin:  0px;
+  height: 100%;
+  width: 49%;
+
+}
+.full-height {
+  display: inline-block;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  background-color: #262D3B;
+  padding: 0px;
+  margin:  0px;
+  height: 100%;
+  width: 49%;
+  padding-left: 20px;
+  }
+  
+#titleblock {
+  
+  background-color: blue;
+  text-align: center;
+  padding: 16px;
+  
+  }
+  
+#span1 {
+
+  margin: 10px;
+  padding-top: 20px;
+  margin-left: 40px;
+
+}
+
+.topBarGen {
+
+	
+	height: 12px;
+	display: inline-block;
+	margin-top: 10px;
+	text-align: center;
+	font-family: Roboto;
+	font-size: 64%;
+	vertical-align: middle;
+	padding: 4px;
+	color: #262D3B;
+	
+}
+
+.topBar1{
+
+   width: 4%
+   
+
+}
+
+.topBar2 {
+
+	width: 6.4%;
+	
+	
+}
+
+
+</style>
+<head>
+        <title>Live Feed of Top 25 Steppers</title>
+        <meta http-equiv="refresh" content="100" />
+    </head>
+
+<body>
+
+<!--<h1 id="titleblock" class = "hstyle" >Step Challenge Live Feed</h1> -->
+<span id="span1">
+	<div class="topBarGen topBar1" style="background-color: #262D3B; color: white; width: 9%">Time Since Last Sync:</div>
+	<div class="topBarGen topBar1" style="background-color: #33cc33">0 - 10 m</div>
+	<div class="topBarGen topBar1" style="background-color: #59cc33">10 - 30 m</div>
+	<div class="topBarGen topBar1" style="background-color: #80cc33">30 - 60 m</div>
+	<div class="topBarGen topBar1" style="background-color: #A6cc33">1 - 1.5 hrs</div>
+	<div class="topBarGen topBar1" style="background-color: #cccc33">1.5 - 2 hrs</div>
+	<div class="topBarGen topBar1" style="background-color: #cca633">2 - 3 hrs</div>
+	<div class="topBarGen topBar1" style="background-color: #cc8033">3 - 6 hrs</div>
+	<div class="topBarGen topBar1" style="background-color: #cc5933">6 - 24 hrs</div>
+	<div class="topBarGen topBar1" style="background-color: #cc3333">1+ days</div>
+	<div class="topBarGen topBar1" style="background-color:#262D3B;color: white; width: 6.4%">No. of Steps:</div>
+	<div class="topBarGen topBar2" style="background-color: #cd7f32">6k - 15k</div>
+	<div class="topBarGen topBar2" style="background-color: #C0C0C0">15k-20k</div>
+	<div class="topBarGen topBar2" style="background-color: #D4AF37">20k - 25k</div>
+	<div class="topBarGen topBar2" style="background-color: #e5e4e2">25k +</div>
+
+	
+	
+</span>
+<div style="padding-top: 0px; background-color:#262D3B;" >
+<div id="chart_div" class="full-height"></div>
+<div id="yesterday_chart" class="half_width"></div>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawMultSeries);
+
+function drawMultSeries() {
+      var data = google.visualization.arrayToDataTable([['name','steps'],['Mingster',19415],['JezDavey',18430],['Sean_H',16193],['Majic',14381],['MattF',13558],['Boyd',12437],['stephenljones',12316],['AVO',12154],['CB2020',11692],['Wakely',10918],['Georgie',10281],['RozGamsa',10102],['EdNelson',10098],['Sewage',9571],['KellieG',9421],['MikeGibbons',9092],['NickLane',8671],['MBott',8627],['LaraS_G',8464],['MarcusCheng',8345],['ShaunMess',8209],['domclark',8176],['CK7',7970],['Ben_Sayer',7945],['MattKay',7938]]);
+	  var yday = google.visualization.arrayToDataTable([['name', 'steps'], ['EdNelson', 28055], ['stephenljones', 27489], ['RobGraham', 25953], ['Dijesh', 25215], ['cconway', 24600], ['Ben_Sayer', 24574], ['jamesyeoward', 24554], ['ben_inshaw', 23988], ['Stepasaurus', 23930], ['MBott', 23626], ['WillRichardson', 23623], ['Sewage', 23600], ['JWilko', 23458], ['JCG', 23307], ['Paul O', 23303], ['pthompson', 23094], ['Wakely', 22763], ['Celine', 22255], ['MarcusCheng', 22125], ['nigel', 21195], ['sarahlroberts', 21006], ['livyoung', 20944], ['The Proclaimer', 20493], ['Georgie', 20247], ['KEvans', 20170]]);
+	  var sync = google.visualization.arrayToDataTable([['name','steps'],['Mingster',30.0],['JezDavey',70.0],['Sean_H',10.0],['Majic',185.0],['MattF',30.0],['Boyd',10.0],['stephenljones',170.0],['AVO',205.0],['CB2020',15.0],['Wakely',15.0],['Georgie',230.0],['RozGamsa',25.0],['EdNelson',220.0],['Sewage',5.0],['KellieG',200.0],['MikeGibbons',90.0],['NickLane',5.0],['MBott',10.0],['LaraS_G',15.0],['MarcusCheng',50.0],['ShaunMess',30.0],['domclark',15.0],['CK7',15.0],['Ben_Sayer',45.0],['MattKay',155.0]]);
+	  
+		var ranges = [
+    [6000, 15000, '#cd7f32'],    // bronze
+    [15000, 20000, '#C0C0C0'],   // silver
+    [20000, 25000, '#D4AF37'],   // gold
+    [25000, null, '#e5e4e2']  // platinum
+		];
+		
+		var ranges1 = [
+    [0, 10, '#33cc33'],    // Bright Green
+    [10, 30, '#59cc33'],  
+	[30, 60, '#80cc33'], 
+	[60, 90, '#a6cc33'], 
+	[90, 120, '#cccc33'], 
+	[120, 180, '#cca633'], 
+	[180, 360, '#cc8033'], 
+    [360, 1400, '#cc5933'],   
+    [1400, null, '#cc3333']  // red
+		];
+		
+		var view = new google.visualization.DataView(data);
+  view.setColumns([0, 1, {
+    calc: function (dt, row) {
+      var rowValue = sync.getValue(row, 1);
+      var color;
+      ranges1.forEach(function (range, index) {
+        if ((rowValue >= range[0]) && ((rowValue < range[1]) || (range[1] === null))) {
+          color = range[2];
+        }
+      });
+      return color;
+    },
+    role: 'style',
+    type: 'string'
+  }]);
+  
+  var view2 = new google.visualization.DataView(yday);
+  view2.setColumns([0, 1, {
+    calc: function (dt, row) {
+      var rowValue2 = dt.getValue(row, 1);
+      var color2;
+      ranges.forEach(function (range, index) {
+        if ((rowValue2 >= range[0]) && ((rowValue2 < range[1]) || (range[1] === null))) {
+          color2 = range[2];
+        }
+      });
+      return color2;
+    },
+    role: 'style',
+    type: 'string'
+  }]);
+
+	  var today = new Date();
+	  var minutes = (Math.floor(parseInt(today.getMinutes())/5)*5+1)
+	  if (minutes < 10) { minutes = '0' + minutes;}
+	  var time = today.getHours()+':'+ minutes;
+	  var date = today.getDate() + '-' + (today.getMonth()+1) + '-' + today.getFullYear();
+	  var dateTime = 'Last Refreshed: '+date + ' ' + time;
+  
+      var options = {
+        title: 'Live Feed of Top 25 Steppers',
+		titleTextStyle: {
+        color: '#F4F2EC',    // any HTML string color ('red', '#cc00cc')
+        fontName: 'Roboto', // i.e. 'Times New Roman'
+        fontSize: 32, // 12, 18 whatever you want (don't specify px)
+        bold: true,    // true or false
+        italic: false   // true of false
+		},
+		//series: [{color: 'white', visibleInLegend: true}, {color: 'red', visibleInLegend: true}],
+		color: '#ffffff',
+		textStyle: {color: '#ffffff'},
+		backgroundColor: '#262D3B',
+		subtitle: 'Top 25 Steppers',
+        width: '650', 
+		height: '700',
+		'chartArea': {'width': '70%', 'height': '65%'},
+		is3d: true,
+        hAxis: {
+          title: dateTime,
+		  titleTextStyle: { color: '#F4F2EC',    // any HTML string color ('red', '#cc00cc')
+				fontName: 'Roboto' // i.e. 'Times New Roman'
+				},
+          minValue: 0,
+		  textStyle: {color: '#F4F2EC', font: 'Roboto'}
+        },
+        vAxis: {
+          title: '',
+		  titleTextStyle: { color: '#F4F2EC',    // any HTML string color ('red', '#cc00cc')
+				fontName: 'Roboto' // i.e. 'Times New Roman'
+				},
+		  textStyle: {color: '#F4F2EC', font: 'Roboto'}
+        },
+		legend: 'none'
+      };
+	  
+	  var optionsYday = {
+        title: 'Yesterdays Top 25 Steppers',
+		titleTextStyle: {
+        color: '#F4F2EC',    // any HTML string color ('red', '#cc00cc')
+        fontName: 'Roboto', // i.e. 'Times New Roman'
+        fontSize: 32, // 12, 18 whatever you want (don't specify px)
+        bold: true,    // true or false
+        italic: false   // true of false
+		},
+		//series: [{color: 'white', visibleInLegend: true}, {color: 'red', visibleInLegend: true}],
+		color: '#ffffff',
+		textStyle: {color: '#ffffff'},
+		backgroundColor: '#262D3B',
+		subtitle: 'Top 25 Steppers',
+        width: '650', 
+		height: '700',
+		'chartArea': {'width': '70%', 'height': '65%'},
+		is3d: true,
+        hAxis: {
+          title: '[Refreshes every morning at 9:30]',
+		  titleTextStyle: { color: '#F4F2EC',    // any HTML string color ('red', '#cc00cc')
+				fontName: 'Roboto' // i.e. 'Times New Roman'
+				},
+          minValue: 0,
+		  textStyle: {color: '#F4F2EC', font: 'Roboto'}
+        },
+        vAxis: {
+          title: '',
+		  titleTextStyle: { color: '#F4F2EC',    // any HTML string color ('red', '#cc00cc')
+				fontName: 'Roboto' // i.e. 'Times New Roman'
+				},
+		  textStyle: {color: '#F4F2EC', font: 'Roboto'}
+        },
+		legend: 'none'
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      chart.draw(view, options);
+	  
+	  var chart = new google.visualization.BarChart(document.getElementById('yesterday_chart'));
+      chart.draw(view2, optionsYday);
+    }
+	
+	
+</script>
+
+</body>
+</html>  
