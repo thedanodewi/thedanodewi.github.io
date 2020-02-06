@@ -95,14 +95,14 @@ html, body {
 <span id="span1">
 	<div class="topBarGen topBar1" style="background-color: #262D3B; color: white; width: 9%">Time Since Last Sync:</div>
 	<div class="topBarGen topBar1" style="background-color: #33cc33">0 - 10 m</div>
-	<div class="topBarGen topBar1" style="background-color: #59cc33">10 - 30 m</div>
-	<div class="topBarGen topBar1" style="background-color: #80cc33">30 - 60 m</div>
-	<div class="topBarGen topBar1" style="background-color: #A6cc33">1 - 1.5 hrs</div>
-	<div class="topBarGen topBar1" style="background-color: #cccc33">1.5 - 2 hrs</div>
-	<div class="topBarGen topBar1" style="background-color: #cca633">2 - 3 hrs</div>
-	<div class="topBarGen topBar1" style="background-color: #cc8033">3 - 6 hrs</div>
-	<div class="topBarGen topBar1" style="background-color: #cc5933">6 - 24 hrs</div>
-	<div class="topBarGen topBar1" style="background-color: #cc3333">1+ days</div>
+	<div class="topBarGen topBar1" style="background-color: #59cc33">10 - 15 m</div>
+	<div class="topBarGen topBar1" style="background-color: #80cc33">15 - 30 m</div>
+	<div class="topBarGen topBar1" style="background-color: #A6cc33">30 - 45 m</div>
+	<div class="topBarGen topBar1" style="background-color: #cccc33">45 - 60 m</div>
+	<div class="topBarGen topBar1" style="background-color: #cca633">60 - 90 m</div>
+	<div class="topBarGen topBar1" style="background-color: #cc8033">1.5 - 3 hrs</div>
+	<div class="topBarGen topBar1" style="background-color: #cc5933">3 - 6 hrs</div>
+	<div class="topBarGen topBar1" style="background-color: #cc3333">6+ hrs</div>
 	<div class="topBarGen topBar1" style="background-color:#262D3B;color: white; width: 6.4%">No. of Steps:</div>
 	<div class="topBarGen topBar2" style="background-color: #cd7f32">6k - 15k</div>
 	<div class="topBarGen topBar2" style="background-color: #C0C0C0">15k-20k</div>
@@ -125,9 +125,9 @@ google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawMultSeries);
 
 function drawMultSeries() {
-      var data = google.visualization.arrayToDataTable([['name','steps'],['Celine',12344],['Mingster',12121],['CB2020',10160],['StephanieSparks',10109],['Stepasaurus',9303],['Dijesh',9011],['cconway',8961],['Majic',8774],['Whitey',8364],['Wakely',7614],['PaulHinz',7539],['PhilK',7415],['ahob',7113],['AndyK',7100],['domclark',6957],['AndreiS',6449],['MattWilliams',6004]]);
+      var data = google.visualization.arrayToDataTable([['name','steps'],['Celine',12344],['Mingster',12121],['CB2020',10160],['StephanieSparks',10109],['Wakely',9523],['Stepasaurus',9303],['Dijesh',9011],['cconway',8961],['Majic',8774],['Whitey',8364],['Rukhsar',7804],['PaulHinz',7539],['PhilK',7415],['ahob',7219],['AndyK',7100],['domclark',6957],['AndreiS',6449],['MattWilliams',6004]]);
 	  var yday = google.visualization.arrayToDataTable([['name', 'steps'], ['Wakely', 32691], ['Mingster', 29252], ['emmaharvey', 29075], ['Neil Leppard', 28429], ['Sewage', 27103], ['Matt F', 26678], ['Ben_Sayer', 26135], ['JezDavey', 25084], ['MBott', 24960], ['sarahlroberts', 24725], ['MarcusCheng', 24191], ['LouisaB', 23311], ['Boyd', 23175], ['stephenljones', 22929], ['HamishMackenzie', 22734], ['Jeremy Webb', 22706], ['mabraham4', 22643], ['Stepasaurus', 22594], ['Majic', 22134], ['ChrisGoodman', 21971], ['Phil K', 21922], ['EdNelson', 21795], ['alastairgrime', 21673], ['SimonH', 21630], ['pthompson', 21505]]);
-	  var sync = google.visualization.arrayToDataTable([['name','steps'],['Celine',6.0],['Mingster',6.0],['CB2020',6.0],['StephanieSparks',6.0],['Stepasaurus',3.0],['Dijesh',6.0],['cconway',6.0],['Majic',6.0],['Whitey',6.0],['Wakely',6.0],['PaulHinz',6.0],['PhilK',6.0],['ahob',6.0],['AndyK',6.0],['domclark',6.0],['AndreiS',6.0],['MattWilliams',6.0]]);
+	  var sync = google.visualization.arrayToDataTable([['name','steps'],['Celine',13.0],['Mingster',13.0],['CB2020',13.0],['StephanieSparks',13.0],['Wakely',13.0],['Stepasaurus',10.0],['Dijesh',13.0],['cconway',13.0],['Majic',13.0],['Whitey',13.0],['Rukhsar',1.0],['PaulHinz',7.0],['PhilK',13.0],['ahob',13.0],['AndyK',13.0],['domclark',13.0],['AndreiS',13.0],['MattWilliams',13.0]]);
 	  
 		var ranges = [
     [6000, 15000, '#cd7f32'],    // bronze
@@ -138,14 +138,14 @@ function drawMultSeries() {
 		
 		var ranges1 = [
     [0, 10, '#33cc33'],    // Bright Green
-    [10, 30, '#59cc33'],  
-	[30, 60, '#80cc33'], 
-	[60, 90, '#a6cc33'], 
-	[90, 120, '#cccc33'], 
-	[120, 180, '#cca633'], 
-	[180, 360, '#cc8033'], 
-    [360, 1400, '#cc5933'],   
-    [1400, null, '#cc3333']  // red
+    [10, 15, '#59cc33'],  
+	[15, 30, '#80cc33'], 
+	[30, 45, '#a6cc33'], 
+	[45, 60, '#cccc33'], 
+	[60, 90, '#cca633'], 
+	[90, 180, '#cc8033'], 
+    [180, 360, '#cc5933'],   
+    [360, null, '#cc3333']  // red
 		];
 		
 		var view = new google.visualization.DataView(data);
