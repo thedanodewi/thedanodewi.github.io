@@ -10,7 +10,7 @@ html, body {
 	background-color: #262D3B;
 }
 
-.half_width{
+.yday{
   display: inline-block;
   flex-flow: row wrap;
   justify-content: center;
@@ -19,8 +19,26 @@ html, body {
   background-color: #262D3B;
   padding: 0px;
   margin:  0px;
-  height: 100%;
+  height: 49%;
   width: 49%;
+  position: fixed;
+  bottom: 4vh;
+  
+
+}
+.podium{
+  display: inline-block;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  background-color: #262D3B;
+  padding: 0px;
+  margin:  0px;
+  
+  width: 49%;
+  position: fixed;
+  top: 10vh;
 
 }
 .full-height {
@@ -114,7 +132,8 @@ html, body {
 </span>
 <div style="padding-top: 0px; background-color:#262D3B;" >
 <div id="chart_div" class="full-height"></div>
-<div id="yesterday_chart" class="half_width"></div>
+<div id="yesterday_chart" class="yday"></div>
+<div id="podium_chart" class="podium"></div>
 </div>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -125,9 +144,11 @@ google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawMultSeries);
 
 function drawMultSeries() {
-      var data = google.visualization.arrayToDataTable([['name','steps'],['Mingster',14585],['Stepasaurus',13959],['nigel',12790],['Celine',12552],['CB2020',11980],['MattF',11406],['SallyGraham',11274],['Wakely',11039],['Majic',10543],['StephanieSparks',10109],['ClaireH',9993],['Georgie',9984],['PaulHinz',9421],['Sewage',9030],['Dijesh',9011],['cconway',8961],['ahob',8899],['AndreiS',8841],['PhilK',8447],['Whitey',8364],['JoHarry',8148],['rajg',7913],['Rukhsar',7804],['MattWilliams',7781],['AndyK',7130]]);
+      var data = google.visualization.arrayToDataTable([['name','steps'],['Mingster',14585],['Stepasaurus',13959],['nigel',12790],['Celine',12552],['CB2020',11980],['MattF',11406],['SallyGraham',11274],['Wakely',11039],['Majic',10543],['StephanieSparks',10109],['ClaireH',9993],['Georgie',9984],['PaulHinz',9421],['rajg',9406],['Sewage',9030],['Dijesh',9011],['cconway',8961],['ahob',8899],['AndreiS',8841],['PhilK',8447],['Whitey',8364],['JoHarry',8148],['Rukhsar',7804],['MattWilliams',7781],['AndyK',7130]]);
 	  var yday = google.visualization.arrayToDataTable([['name', 'steps'], ['Wakely', 32691], ['Mingster', 29252], ['emmaharvey', 29075], ['Neil Leppard', 28429], ['Sewage', 27103], ['Matt F', 26678], ['Ben_Sayer', 26135], ['JezDavey', 25084], ['MBott', 24960], ['sarahlroberts', 24725]]);
-	  var sync = google.visualization.arrayToDataTable([['name','steps'],['Mingster',80.0],['Stepasaurus',15.0],['nigel',110.0],['Celine',5.0],['CB2020',30.0],['MattF',80.0],['SallyGraham',20.0],['Wakely',25.0],['Majic',60.0],['StephanieSparks',142.0],['ClaireH',55.0],['Georgie',55.0],['PaulHinz',5.0],['Sewage',10.0],['Dijesh',142.0],['cconway',142.0],['ahob',15.0],['AndreiS',120.0],['PhilK',15.0],['Whitey',142.0],['JoHarry',80.0],['rajg',10.0],['Rukhsar',129.0],['MattWilliams',15.0],['AndyK',85.0]]);
+	  var sync = google.visualization.arrayToDataTable([['name','steps'],['Mingster',85.0],['Stepasaurus',5.0],['nigel',115.0],['Celine',10.0],['CB2020',35.0],['MattF',85.0],['SallyGraham',25.0],['Wakely',30.0],['Majic',65.0],['StephanieSparks',147.0],['ClaireH',60.0],['Georgie',60.0],['PaulHinz',10.0],['rajg',15.0],['Sewage',15.0],['Dijesh',147.0],['cconway',147.0],['ahob',5.0],['AndreiS',125.0],['PhilK',20.0],['Whitey',147.0],['JoHarry',85.0],['Rukhsar',134.0],['MattWilliams',5.0],['AndyK',90.0]]);
+	  var podm = google.visualization.arrayToDataTable([['name','steps', {role: 'style'}],['Wakely',24000,'#C0C0C0'],['EdNelson', 31000,'#D4AF37'],['Byron',23569,'#cd7f32']]);
+	  
 	  
 		var ranges = [
     [6000, 15000, '#cd7f32'],    // bronze
@@ -166,6 +187,22 @@ function drawMultSeries() {
   
   var view2 = new google.visualization.DataView(yday);
   view2.setColumns([0, 1, {
+    calc: function (dt, row) {
+      var rowValue2 = dt.getValue(row, 1);
+      var color2;
+      ranges.forEach(function (range, index) {
+        if ((rowValue2 >= range[0]) && ((rowValue2 < range[1]) || (range[1] === null))) {
+          color2 = range[2];
+        }
+      });
+      return color2;
+    },
+    role: 'style',
+    type: 'string'
+  }]);
+  
+  var view3 = new google.visualization.DataView(podm);
+  view3.setColumns([0, 1, {
     calc: function (dt, row) {
       var rowValue2 = dt.getValue(row, 1);
       var color2;
@@ -238,7 +275,7 @@ function drawMultSeries() {
 		backgroundColor: '#262D3B',
 		subtitle: 'Top 25 Steppers',
         width: '650', 
-		height: '700',
+		height: '350',
 		'chartArea': {'width': '70%', 'height': '65%'},
 		is3d: true,
         hAxis: {
@@ -258,12 +295,53 @@ function drawMultSeries() {
         },
 		legend: 'none'
       };
-
+	  
+	  var optionsPodm = {
+        title: 'Overall Podium: Average Steps',
+		titleTextStyle: {
+        color: '#F4F2EC',    // any HTML string color ('red', '#cc00cc')
+        fontName: 'Roboto', // i.e. 'Times New Roman'
+        fontSize: 32, // 12, 18 whatever you want (don't specify px)
+        bold: true,    // true or false
+        italic: false   // true of false
+		},
+		//series: [{color: 'white', visibleInLegend: true}, {color: 'red', visibleInLegend: true}],
+		color: '#ffffff',
+		textStyle: {color: '#ffffff'},
+		backgroundColor: '#262D3B',
+		subtitle: 'Top 25 Steppers',
+        width: '650', 
+		height: '250',
+		'chartArea': {'width': '70%', 'height': '65%'},
+		is3d: true,
+        hAxis: {
+          title: '',
+		  titleTextStyle: { color: '#A2A2A2',    // any HTML string color ('red', '#cc00cc')
+				fontName: 'Roboto' // i.e. 'Times New Roman'
+				},
+          minValue: 0,
+		  textStyle: {color: '#F4F2EC', font: 'Roboto'}
+        },
+        vAxis: {
+          title: '',
+		  titleTextStyle: { color: '#F4F2EC',    // any HTML string color ('red', '#cc00cc')
+				fontName: 'Roboto' // i.e. 'Times New Roman'
+				},
+		  textStyle: {color: 'transparent', font: 'Roboto'},
+		  gridlines: { color: 'transparent' }
+        },
+		legend: 'none'
+      };
+	  
+	  
       var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
       chart.draw(view, options);
 	  
 	  var chart = new google.visualization.BarChart(document.getElementById('yesterday_chart'));
       chart.draw(view2, optionsYday);
+	  
+	  var chart = new google.visualization.ColumnChart(document.getElementById('podium_chart'));
+      chart.draw(podm, optionsPodm);
     }
 	
 	
