@@ -122,10 +122,10 @@ html, body {
 	<div class="topBarGen topBar1" style="background-color: #cc5933">3 - 6 hrs</div>
 	<div class="topBarGen topBar1" style="background-color: #cc3333">6+ hrs</div>
 	<div class="topBarGen topBar1" style="background-color:#262D3B;color: white; width: 6.4%">No. of Steps:</div>
-	<div class="topBarGen topBar2" style="background-color: #cd7f32">6k - 15k</div>
-	<div class="topBarGen topBar2" style="background-color: #C0C0C0">15k-20k</div>
-	<div class="topBarGen topBar2" style="background-color: #D4AF37">20k - 25k</div>
-	<div class="topBarGen topBar2" style="background-color: #e5e4e2">25k +</div>
+	<div class="topBarGen topBar2" style="background-color: #cd7f32">Bronze</div>
+	<div class="topBarGen topBar2" style="background-color: #C0C0C0">Silver</div>
+	<div class="topBarGen topBar2" style="background-color: #D4AF37">Gold</div>
+
 
 	
 	
@@ -144,9 +144,9 @@ google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawMultSeries);
 
 function drawMultSeries() {
-      var data = google.visualization.arrayToDataTable([['name','steps'],['Mingster',14585],['Stepasaurus',13959],['nigel',12790],['Celine',12694],['MattF',12008],['CB2020',11980],['SallyGraham',11274],['Wakely',11039],['Majic',10543],['StephanieSparks',10109],['ClaireH',9993],['Georgie',9984],['PaulHinz',9459],['rajg',9406],['Sewage',9030],['Dijesh',9011],['cconway',8961],['ahob',8899],['AndreiS',8841],['PhilK',8447],['Whitey',8364],['JoHarry',8148],['Rukhsar',7804],['MattWilliams',7781],['AndyK',7130]]);
+      var data = google.visualization.arrayToDataTable([['name','steps'],['Mingster',14585],['Stepasaurus',13966],['nigel',12790],['Celine',12694],['MattForester',12008],['MattF',12008],['CB2020',11980],['SallyGraham',11274],['Wakely',11039],['Majic',10543],['StephanieSparks',10109],['ClaireH',9993],['Georgie',9984],['PaulHinz',9459],['rajg',9406],['ahob',9284],['Sewage',9030],['Dijesh',9011],['cconway',8961],['AndreiS',8841],['PhilK',8447],['Whitey',8364],['JoHarry',8148],['MattWilliams',7885],['Rukhsar',7804]]);
 	  var yday = google.visualization.arrayToDataTable([['name', 'steps'], ['Wakely', 32691], ['Mingster', 29252], ['emmaharvey', 29231], ['Neil Leppard', 28429], ['Sewage', 27103], ['Matt F', 26678], ['Ben_Sayer', 26135], ['JezDavey', 25084], ['MBott', 24960], ['sarahlroberts', 24725], ['nigel', 24560], ['MarcusCheng', 24191], ['stephenljones', 23799], ['LouisaB', 23311], ['Boyd', 23175]]);
-	  var sync = google.visualization.arrayToDataTable([['name','steps'],['Mingster',90.0],['Stepasaurus',10.0],['nigel',120.0],['Celine',15.0],['MattF',90.0],['CB2020',40.0],['SallyGraham',30.0],['Wakely',35.0],['Majic',70.0],['StephanieSparks',152.0],['ClaireH',65.0],['Georgie',65.0],['PaulHinz',15.0],['rajg',5.0],['Sewage',20.0],['Dijesh',152.0],['cconway',152.0],['ahob',10.0],['AndreiS',130.0],['PhilK',25.0],['Whitey',152.0],['JoHarry',90.0],['Rukhsar',139.0],['MattWilliams',10.0],['AndyK',95.0]]);
+	  var sync = google.visualization.arrayToDataTable([['name','steps'],['Mingster',95.0],['Stepasaurus',15.0],['nigel',125.0],['Celine',5.0],['MattForester',1.0],['MattF',5.0],['CB2020',45.0],['SallyGraham',35.0],['Wakely',40.0],['Majic',75.0],['StephanieSparks',157.0],['ClaireH',70.0],['Georgie',70.0],['PaulHinz',5.0],['rajg',10.0],['ahob',15.0],['Sewage',25.0],['Dijesh',157.0],['cconway',157.0],['AndreiS',135.0],['PhilK',30.0],['Whitey',157.0],['JoHarry',95.0],['MattWilliams',15.0],['Rukhsar',144.0]]);
 	  var podm = google.visualization.arrayToDataTable([['name','steps', {role: 'style'}],['Wakely',24988,'#C0C0C0'],['EdNelson', 30756,'#D4AF37'],['Byron',22747,'#cd7f32']]);
 	  
 	  
