@@ -125,9 +125,9 @@ google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawMultSeries);
 
 function drawMultSeries() {
-      var data = google.visualization.arrayToDataTable([['name','steps'],['Mingster',14585],['Stepasaurus',13934],['nigel',12790],['Celine',12552],['CB2020',11980],['MattF',11406],['SallyGraham',11274],['Wakely',11039],['Majic',10543],['StephanieSparks',10109],['ClaireH',9993],['Georgie',9984],['PaulHinz',9421],['Sewage',9030],['Dijesh',9011],['cconway',8961],['AndreiS',8841],['ahob',8472],['PhilK',8447],['Whitey',8364],['JoHarry',8148],['rajg',7913],['Rukhsar',7804],['MattWilliams',7713],['AndyK',7130]]);
-	  var yday = google.visualization.arrayToDataTable([['name', 'steps'], ['Wakely', 32691], ['Mingster', 29252], ['emmaharvey', 29075], ['Neil Leppard', 28429], ['Sewage', 27103], ['Matt F', 26678], ['Ben_Sayer', 26135], ['JezDavey', 25084], ['MBott', 24960], ['sarahlroberts', 24725], ['MarcusCheng', 24191], ['LouisaB', 23311], ['Boyd', 23175], ['stephenljones', 22929], ['HamishMackenzie', 22734], ['Jeremy Webb', 22706], ['mabraham4', 22643], ['Stepasaurus', 22594], ['Majic', 22134], ['ChrisGoodman', 21971], ['Phil K', 21922], ['EdNelson', 21795], ['alastairgrime', 21673], ['SimonH', 21630], ['pthompson', 21505]]);
-	  var sync = google.visualization.arrayToDataTable([['name','steps'],['Mingster',75.0],['Stepasaurus',10.0],['nigel',105.0],['Celine',15.0],['CB2020',25.0],['MattF',75.0],['SallyGraham',15.0],['Wakely',20.0],['Majic',55.0],['StephanieSparks',137.0],['ClaireH',50.0],['Georgie',50.0],['PaulHinz',65.0],['Sewage',5.0],['Dijesh',137.0],['cconway',137.0],['AndreiS',115.0],['ahob',10.0],['PhilK',10.0],['Whitey',137.0],['JoHarry',75.0],['rajg',5.0],['Rukhsar',124.0],['MattWilliams',10.0],['AndyK',80.0]]);
+      var data = google.visualization.arrayToDataTable([['name','steps'],['Mingster',14585],['Stepasaurus',13959],['nigel',12790],['Celine',12552],['CB2020',11980],['MattF',11406],['SallyGraham',11274],['Wakely',11039],['Majic',10543],['StephanieSparks',10109],['ClaireH',9993],['Georgie',9984],['PaulHinz',9421],['Sewage',9030],['Dijesh',9011],['cconway',8961],['ahob',8899],['AndreiS',8841],['PhilK',8447],['Whitey',8364],['JoHarry',8148],['rajg',7913],['Rukhsar',7804],['MattWilliams',7781],['AndyK',7130]]);
+	  var yday = google.visualization.arrayToDataTable([['name', 'steps'], ['Wakely', 32691], ['Mingster', 29252], ['emmaharvey', 29075], ['Neil Leppard', 28429], ['Sewage', 27103], ['Matt F', 26678], ['Ben_Sayer', 26135], ['JezDavey', 25084], ['MBott', 24960], ['sarahlroberts', 24725]]);
+	  var sync = google.visualization.arrayToDataTable([['name','steps'],['Mingster',80.0],['Stepasaurus',15.0],['nigel',110.0],['Celine',5.0],['CB2020',30.0],['MattF',80.0],['SallyGraham',20.0],['Wakely',25.0],['Majic',60.0],['StephanieSparks',142.0],['ClaireH',55.0],['Georgie',55.0],['PaulHinz',5.0],['Sewage',10.0],['Dijesh',142.0],['cconway',142.0],['ahob',15.0],['AndreiS',120.0],['PhilK',15.0],['Whitey',142.0],['JoHarry',80.0],['rajg',10.0],['Rukhsar',129.0],['MattWilliams',15.0],['AndyK',85.0]]);
 	  
 		var ranges = [
     [6000, 15000, '#cd7f32'],    // bronze
@@ -224,7 +224,7 @@ function drawMultSeries() {
       };
 	  
 	  var optionsYday = {
-        title: 'Yesterdays Top 25 Steppers',
+        title: 'Yesterdays Top 10 Steppers',
 		titleTextStyle: {
         color: '#F4F2EC',    // any HTML string color ('red', '#cc00cc')
         fontName: 'Roboto', // i.e. 'Times New Roman'
